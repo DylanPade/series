@@ -4,8 +4,11 @@
 
     {# création de variable #}
     {%  set name = "Brian" %}
-    {#  affichage d'une variable #}
-    <h2>Hello {{  name }} !</h2>
+
+    {#  affichage des variables serie et nameOfUser #}
+    <p>{{ serie.title }} : {{ serie.year }}</p>
+    <h2>Hello {{  nameOfUser }} !</h2>
+
     {#  création de tableau #}
     {% set colors = ['cornflowerblue','pink','purple','green'] %}
 

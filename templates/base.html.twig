@@ -6,9 +6,17 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %} Series ! {% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="icon" href ="{{ asset('img/icon.png') }}">
 </head>
 <body>
+<div class="container">
     <header>
+        <h1><a href="{{ path('main_home') }}"><img src="{{ asset('img/logo.svg') }}" alt="Series !"></a></h1>
         {{ include('nav.html.twig') }}
     </header>
     <main>
@@ -17,5 +25,8 @@
     <footer>
         {{ include('nav.html.twig') }}
     </footer>
+</div>
+{%block extraStyle %}
+{% endblock %}
 </body>
 </html>
